@@ -1,0 +1,16 @@
+<h2>Guest Appearance Form</h2>
+
+<%=form_for @appearance do |f|%>
+
+    <%=f.label :guests%>
+    <%=f.collection_select :guests, Guest.all, :id, :name%>
+
+    <%=f.label :episode_id%>
+    <%=f.collection_select :episode_id, Episode.all, :id, :number%>
+
+    <%=f.label :rating%>
+    <%=f.text_field :rating%>
+
+    <%=f.submit%>
+
+<%end%>

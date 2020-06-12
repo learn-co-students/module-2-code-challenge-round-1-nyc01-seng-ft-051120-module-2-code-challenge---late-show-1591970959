@@ -33,7 +33,7 @@ After running the setup instructions above, visiting `'/guests'` will display al
 
 ***Schema***
 
-Episodes
+Episodes                               
 
 | Column | Type |
 | ------------- | ------------- |
