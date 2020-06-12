@@ -1,0 +1,21 @@
+<h1>New Appearance: </h1>
+
+<% if flash[:appearance_errors] %>
+    <% flash[:appearance_errors].each do |e| %>
+    <%= e %>
+    <% end %>
+<% end%>
+
+<%= form_for @appearance do |f| %>
+    <%= f.label :episode_id %><br>
+    <%= f.collection_select :episode_id, @episodes, :id, :date %><br>
+
+    <%= f.label :guest_id %><br>
+    <%= f.collection_select :guest_id, @guests, :id, :name %><br>
+
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %><br>
+
+    <%= f.submit "BEEF" %>
+
+<% end %>
