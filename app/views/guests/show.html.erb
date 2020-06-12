@@ -1,0 +1,8 @@
+<div> Our Guest <%= @guest.name %></div>
+<% @guest.appearences.each do |v|%>
+
+<% episodes = @guest.episodes.find(v.episode_id) %>
+
+<div>appeared on the show : <%= link_to episodes.date.strftime("%B %d, %Y"), episode_path(episodes.id) %> and got a <%=v.rating%> out of 5 Rating</div>
+<% end%>
+<%= link_to 'go back', guests_path %>

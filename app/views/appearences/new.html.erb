@@ -1,0 +1,16 @@
+<% if flash[:errors]%>
+<% flash[:errors].each do |v|%>
+<%= v %>
+<% end%>
+<% end%>
+<%= form_for @appearence do |v| %>
+<%= v.label :episode_id %>
+<%= v.collection_select :episode_id, @episode, :id, :date %><br>
+
+<%= v.label :guest_id %>
+<%= v.collection_select :guest_id, @guest, :id, :name %><br>
+
+<%= v.label :rating %>
+<%=v.number_field :rating, in: 1.0..5.0 %>
+<%= v.submit %>
+<% end%>
