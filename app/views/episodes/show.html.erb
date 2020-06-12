@@ -3,3 +3,4 @@
 <% @episode.guests.each do |g| %>
 <%= link_to g.name, guest_path(g)%><br>
 <% end %>
+Episode Average Rating: <%= @episode.avg_rating %>
