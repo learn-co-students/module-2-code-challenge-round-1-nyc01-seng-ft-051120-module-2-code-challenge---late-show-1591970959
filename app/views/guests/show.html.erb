@@ -4,8 +4,8 @@
 <h2>Occupation: <%= @guest.occupation %></h2>
 
 <% if @guest.appearances.any? %>
-    <h3> Guest Appearances: </h3>
-    <% @guest.appearances.each do |appearance| %>
+    <h3> Guest Appearances (Ordered By Rating): </h3>
+    <% @guest.order_by_rating.each do |appearance| %>
     <h4>Episode: <%= appearance.episode.number %> on <%= link_to appearance.episode.date, episode_path(appearance.episode) %> - Appearance Rating: <%= appearance.numeric_rating %></h4>
     <% end %>
 <% else %>
