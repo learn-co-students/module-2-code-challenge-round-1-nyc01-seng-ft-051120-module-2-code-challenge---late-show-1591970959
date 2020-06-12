@@ -68,15 +68,15 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 
 
-### 1. Appearance Model
+<!-- ### 1. Appearance Model
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
 - Guest can appear on many episodes
 - Episode can have multiple guests
-- Appearance stores a numeric rating
+- Appearance stores a numeric rating -->
 
-### 2. New Appearance Form
+<!-- ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
 
@@ -85,15 +85,15 @@ A user can fill out a form to create a new Appearance. They can:
 - Enter a numeric rating
 - Submit the form
 
-After submitting the form, the user should be redirected to the selected episode's show page.
+After submitting the form, the user should be redirected to the selected episode's show page. -->
 
-### 3. Episode Show Page
+<!-- ### 3. Episode Show Page
 
 On the episode show page, a user should see:
 
 - Episode date
 - A list of the guests who were on that episode
-- Each guest's name should link to the Guest Show page
+- Each guest's name should link to the Guest Show page -->
 
 ### 4. Guest Show Page Episode links
 
@@ -108,11 +108,11 @@ Each Episode date should link to the show page for that Episode.
 
 ### 5. Appearance Rating Validation
 
-The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
+<!-- The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
-- Add a validation to ensure that the rating is between 1 and 5.
-- Add handling for this error to the Appearance create action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+- Add a validation to ensure that the rating is between 1 and 5. -->
+<!-- - Add handling for this error to the Appearance create action.
+- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating. -->
 
 ### 6. Advanced: Additional Appearance Validation
 
