@@ -1,0 +1,8 @@
+<h1><%= @guest.name %></h1>
+<% @guest.episodes.each do |episode|%><br>
+<p>Episode: <%= link_to episode.date, episode %> </p>
+<p>Rating: <% episode.appearances.select { |a| a.guest == @guest }.each do |appearance| %> <p>
+  <%= appearance.rating %>
+<% end  %>
+
+<% end  %>

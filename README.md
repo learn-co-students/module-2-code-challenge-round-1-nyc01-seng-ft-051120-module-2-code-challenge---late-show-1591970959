@@ -85,7 +85,7 @@ A user can fill out a form to create a new Appearance. They can:
 - Enter a numeric rating
 - Submit the form
 
-After submitting the form, the user should be redirected to the selected episode's show page.
+After submitting the form, the user should be redirected to the selected episode's show page. √
 
 ### 3. Episode Show Page
 
