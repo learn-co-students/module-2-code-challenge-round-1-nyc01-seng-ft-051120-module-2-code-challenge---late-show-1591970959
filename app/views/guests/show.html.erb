@@ -1,0 +1,18 @@
+<hr color='red'>
+<h1>Guest: <%=@guest.name%></h1>
+<hr color='red'>
+<h2>List of Episodes <%=@guest.name%> Appeared</h2>
+<ol> <h4><% @guest.episodes.each do |ep| %>
+<li>Date:  <%= link_to ep.date, episode_path(ep.id)%><br> Number:<%=ep.number%></li>
+<% end %>
+</h4></ol>
+
+<h2>Appearance Rating of  <%=@guest.name%></h2>
+
+<ol> <h4><% @guest.sort_rating.each do |ep| %>
+<li>Rating:  <%=  ep.rating%></li>
+<% end %>
+</h4></ol>
+
+<h2 style='color :grey'>
+<%=@guest.name%> 's Average rating:  <%=@guest.ave_rating%>

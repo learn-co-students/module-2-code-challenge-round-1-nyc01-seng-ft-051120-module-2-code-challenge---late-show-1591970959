@@ -1,0 +1,9 @@
+<hr color='red'>
+<h1>Episode Number: <%=@episode.number%></h1>
+<hr color='red'>
+<h2 style='color:green'>Show Date: <%=@episode.date%><br></h2>
+<ol>
+<h2>List of guest watching this show....<h2>
+<% @episode.guests.each do |g| %>
+<h3><li><%=link_to g.name, guest_path(g.id)%></li><h3>
+<% end %>

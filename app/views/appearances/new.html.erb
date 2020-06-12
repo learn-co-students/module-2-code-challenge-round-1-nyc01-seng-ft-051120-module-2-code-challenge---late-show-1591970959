@@ -1,0 +1,22 @@
+<hr color='red'>
+<h1>Watch Show</h1>
+<hr color='red'>
+<% if flash[:errors] %>
+    <ul><h3 style='color: red'>
+  <% flash[:errors].each do |e| %>
+  <li><%=e%></li>
+  <% end %>
+</h3><ul>
+<% end %>
+
+<%= form_for @appearance do |f| %>
+<%= f.label :"Rate The Show"%>
+<%= f.number_field :rating %>
+
+<%= f.label :"Find yourself from the list..." %>
+<%=f.collection_select :guest_id, @guests, :id, :name%>
+
+<%= f.label :"Select episode you want to watch..." %>
+<%=f.collection_select :episode_id, @episodes, :id, :number%>
+<%= f.submit %>
+<% end %>
