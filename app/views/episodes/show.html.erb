@@ -1,0 +1,13 @@
+<h1> Episode Information </h1>
+
+<h2>Number: <%= @episode.number %></h2>
+<h2>Date: <%= @episode.date %></h2>
+
+<% if @episode.appearances.any? %>
+    <h3> Episode Guest Appearances: </h3>
+    <% @episode.appearances.each do |appearance| %>
+    <h4>Guest Name: <%= link_to appearance.guest.name, guest_path(appearance.guest) %> - Guest Occupation <%= appearance.guest.occupation %></h4>
+    <% end %>
+<% else %>
+    <h3> This Episode has not booked any guests.</h3>
+<% end %>
