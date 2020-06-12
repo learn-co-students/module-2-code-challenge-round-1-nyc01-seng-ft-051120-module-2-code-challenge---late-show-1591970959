@@ -1,0 +1,6 @@
+
+<%= @guest.name %> <br>
+<% @guest.episodes.each.with_index do |episode, i| %>
+  <%= link_to episode.created_at.strftime('%D'), episode_path %>
+  rating: <%= episode.appearances[0].rating %>
+<% end %>

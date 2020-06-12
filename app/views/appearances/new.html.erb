@@ -1,0 +1,8 @@
+<%= form_for @appearance do |f| %>
+  <%= @appearance.errors.full_messages.first if @appearance.errors.any? %>
+
+  <%= f.collection_select :guest, @guests, :id, :name %>
+  <%= f.collection_select :episode, @episodes, :id, :number %>
+
+  <%= f.number_field :rating %>
+<% end %>
