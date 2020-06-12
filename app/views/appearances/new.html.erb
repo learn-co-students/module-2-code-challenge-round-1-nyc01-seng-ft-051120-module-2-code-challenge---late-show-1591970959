@@ -8,7 +8,7 @@
 
 <%= form_for @appearance do |f| %>
 
-    <%= f.label :guest_id, "Which celeb would you like to see?" %>
+    <%= f.label :guest_id, "Which guest would you like to see?" %>
     <%= f.collection_select :guest_id, @guests, :id, :name %><br>
 
     <%= f.label :episode_id, "Which episode would you like to see them on?" %>

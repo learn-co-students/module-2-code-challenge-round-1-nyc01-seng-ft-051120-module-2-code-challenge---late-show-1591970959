@@ -12,7 +12,8 @@ class Appearance < ApplicationRecord
     less_than_or_equal_to: 5,
     message: "must be between 1-5"
 
-   
+    # ADVANCED
+    validates :guest_id, uniqueness: { message: "already appears on that episode!" }
     
   
 end
