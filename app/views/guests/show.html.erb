@@ -1,0 +1,8 @@
+<h1> <%= @guest.name_and_occupation %> </h1><br>
+<% @guest.appearances.uniq.each do |appearance| %>
+<%= link_to "Episode: #{appearance.episode.date}", appearance.episode %><br>
+<%= "Appearance Rating: #{appearance.rating}"%><br><br>
+<% end %><br>
+
+
+<%= link_to "Back to Guests", guests_path %>
