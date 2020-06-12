@@ -1,0 +1,1 @@
+# There were some syntax errors in appearances_controller.rb (now fixed)

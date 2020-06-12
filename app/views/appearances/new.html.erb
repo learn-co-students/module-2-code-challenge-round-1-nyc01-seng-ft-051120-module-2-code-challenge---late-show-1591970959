@@ -1,11 +1,11 @@
 <h1>New Guest Appearance</h1>
 <br> 
 
-<% if @appearance.errors.any? %> 
-    <% @appearance.errors.full_messages.each do |message| %>
-        <h3>Error:<%= message %></h3><br>
-        <% end %>  
-    <% end %> 
+<% if flash[:appearance_errors] %> 
+    <% flash[:appearance_errors].each do |error| %>
+        <p><%= error %></p>
+        <% end %> 
+    <% end %>
     
 <br>
 <%= form_for @appearance do |f| %> 
@@ -14,7 +14,7 @@
     <%= f.collection_select :guest_id, @guests, :id, :name %>
 
     <%= f.label :episode_id %> 
-    <%= f.collection_select :episode_id, @episodes, :id, :date, :number %>
+    <%= f.collection_select :episode_id, @episodes, :id, :date %>
 
     <%= f.label :rating %><br>
     <%= f.text_field :rating %>

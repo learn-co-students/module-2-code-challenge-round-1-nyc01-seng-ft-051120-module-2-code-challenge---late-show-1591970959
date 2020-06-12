@@ -92,16 +92,16 @@ Guests
 
 ### 2. New Appearance Form
 
-A user can fill out a form to create a new Appearance. They can: 
+<!-- A user can fill out a form to create a new Appearance. They can:  -->
 <!-- 
             /appearances/new 
  -->
-- Choose an existing guest from a select dropdown
-- Choose an existing episode from a select dropdown
+<!-- - Choose an existing guest from a select dropdown
+- Choose an existing episode from a select dropdown -->
 <!-- - Enter a numeric rating -->
 <!-- - Submit the form -->
 
-After submitting the form, the user should be redirected to the selected episode's show page.
+<!-- After submitting the form, the user should be redirected to the selected episode's show page. -->
 
 ### 3. Episode Show Page
 
@@ -109,18 +109,18 @@ After submitting the form, the user should be redirected to the selected episode
 
 <!-- - Episode date -->
 <!-- - A list of the guests who were on that episode -->
-- Each guest's name should link to the Guest Show page
+<!-- - Each guest's name should link to the Guest Show page -->
 
 ### 4. Guest Show Page Episode links
 
-On the Guest show page, add a list of the Episodes the Guest has appeared on.
-
+<!-- On the Guest show page, add a list of the Episodes the Guest has appeared on. -->
+<!-- 
 For each Episode, show the:
 
 - date of the Episode
 - rating for the Appearance
 
-Each Episode date should link to the show page for that Episode.
+Each Episode date should link to the show page for that Episode. -->
 
 ### 5. Appearance Rating Validation
 
