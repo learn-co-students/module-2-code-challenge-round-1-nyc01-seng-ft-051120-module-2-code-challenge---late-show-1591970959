@@ -1,0 +1,12 @@
+
+
+<h1>Appearance Form</h1>
+<%= form_for( @appearance , remote: true) do |f| %>
+<%=f.label :guest%>
+<%=f.collection_select :guest_id,@guests,:id,:name%>
+<%=f.label :episode%>
+<%=f.collection_select :episode_id,@episodes,:id,:number%>
+<%=f.label :rating%>
+<%=f.number_field :rating%>
+<%=f.submit%>
+<% end %>

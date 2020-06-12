@@ -1,0 +1,14 @@
+<h1><%= @guest.name%></h1>
+<h3>occupation: <%= @guest.occupation%></h3>
+<br/>
+<br/>
+<% if @guest.appearances.empty?%>
+  <p>This guest have no taken part of any episode yet.<p>
+<% else%>
+  <h3>Episodes</h3>
+  <ul>
+    <%@guest.appearances.each do |a|%>
+      <li><%= link_to  a.details, a.episode %></li>
+    <%end%>
+  </ul>
+<%end%>

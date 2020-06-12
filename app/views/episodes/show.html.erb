@@ -1,0 +1,15 @@
+<h1>Episode details</h1>
+<h3>Number: <%=@episode.number%></h3>
+<h3>Date: <%=@episode.date%></h3>
+<br/>
+<br/>
+<% if @episode.guests.empty?%>
+  <p>There are no guests' participating in this episode<p>
+<% else%>
+  <h3>Guests</h3>
+  <ul>
+    <%@episode.guests.each do |g|%>
+      <li><%= link_to  g.name, g %></li>
+    <%end%>
+  </ul>
+<%end%>
