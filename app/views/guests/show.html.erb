@@ -1,0 +1,14 @@
+<h1><%= @guest.name %> SHOW PAGE</h1>
+
+<ul>
+
+<% @guest.episodes.each do |e| %>
+<li>Episode Air Date: <%= link_to e.date, episode_path(e) %></li>
+<li>Rating: <%= e.appearances.find_by(episode_id: e.id).rating %></li>
+<%end%>
+
+
+
+</ul>
+
+<p><%= link_to "Back to Guest Home", guests_path %></p>

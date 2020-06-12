@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Guest.destroy_all
+Episode.destroy_all 
+Appearance.destroy_all 
+puts "Destroying Seed Data..."
+puts "Creating Seed Data..."
 
 require 'csv'
 
@@ -24,4 +28,15 @@ date = Date.parse('2015-09-08')
   Episode.create(date: date, number: num)
   date = date.next
 end
+
+25.times do 
+  Appearance.create(episode_id: Episode.all.sample.id, guest_id: Guest.all.sample.id, rating: rand(1..10))
+end 
+
+#HEY GUYS LOOK DOWN HERE DONT IGNORE ME PLS
+#SO I CREATED THESE APPEARANCES WITH A rand(1..10) TO SEED PRIOR TO SEEING THE 5TH DELIVERABLE
+#SO SOME OF THE INSTANCES WOULD HAVE ALREADY BEEN SAVED WITH RATINGS HIGHER THAN 5
+#but never again will they be
+#I also want to note that the random generator gave David Spade a rating of 1, the lowest possible rating-
+#Are we sure thats random?
 
