@@ -6,12 +6,12 @@
 
 ## Topics
 
-- MVC
+<!-- - MVC
 - REST
 - Request-Response Cycle
 - Forms and Form Helpers
 - ActiveRecord
-- Validations
+- Validations -->
 
 ## Setup
 
@@ -66,13 +66,13 @@ Guests
 | updated_at  | DateTime  | -->
 
 ### Model Methods and Validations
-
-- None
+<!-- 
+- None -->
 
 ### Routes, Controllers and Views
-
+<!-- 
 - Episodes index
-- Guests index
+- Guests index -->
 
 ## Instructions
 
@@ -98,17 +98,17 @@ A user can fill out a form to create a new Appearance. They can:
  -->
 - Choose an existing guest from a select dropdown
 - Choose an existing episode from a select dropdown
-- Enter a numeric rating
-- Submit the form
+<!-- - Enter a numeric rating -->
+<!-- - Submit the form -->
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
 ### 3. Episode Show Page
 
-On the episode show page, a user should see:
+<!-- On the episode show page, a user should see: -->
 
-- Episode date
-- A list of the guests who were on that episode
+<!-- - Episode date -->
+<!-- - A list of the guests who were on that episode -->
 - Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
@@ -124,11 +124,26 @@ Each Episode date should link to the show page for that Episode.
 
 ### 5. Appearance Rating Validation
 
-The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
+<!-- The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay). -->
 
-- Add a validation to ensure that the rating is between 1 and 5.
-- Add handling for this error to the Appearance create action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+<!-- - Add a validation to ensure that the rating is between 1 and 5. -->
+<!-- - Add handling for this error to the Appearance create action.
+- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating. -->
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 6. Advanced: Additional Appearance Validation
 

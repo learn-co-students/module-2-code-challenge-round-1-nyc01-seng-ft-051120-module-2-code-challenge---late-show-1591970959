@@ -7,7 +7,24 @@ class AppearancesController < ApplicationController
     end
 
     def create 
+        @appearance = Appearance.create(appearance_params)
+        if @appearance.valid? 
+            redirect_to episode_path(@appearance.episode_id)
+        begin
+            flash[:appearance_errors] = @appearance.errors.full_messages
+            redirect_to new_appearance_path    
+        else
+            
+        ensure
+            
+        end
+    
+    end 
 
+private
 
+    def appearance_params
+        params.require(:appearance).permit(:guest_id, :episode_id, :rating)
+    end
 
 end

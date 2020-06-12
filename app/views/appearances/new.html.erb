@@ -1,9 +1,14 @@
 <h1>New Guest Appearance</h1>
-
 <br> 
 
+<% if @appearance.errors.any? %> 
+    <% @appearance.errors.full_messages.each do |message| %>
+        <h3>Error:<%= message %></h3><br>
+        <% end %>  
+    <% end %> 
+    
+<br>
 <%= form_for @appearance do |f| %> 
-
 
     <%= f.label :guest_id %> 
     <%= f.collection_select :guest_id, @guests, :id, :name %>
