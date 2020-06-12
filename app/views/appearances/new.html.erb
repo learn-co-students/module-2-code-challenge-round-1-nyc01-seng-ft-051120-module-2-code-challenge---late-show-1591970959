@@ -1,4 +1,8 @@
-
+<%if flash[:errors]%>
+  <% flash[:errors].each do |e|%>
+    <p style="color:red"> <%=e%></p>
+  <%end%>
+<%end%>
 
 <h1>Appearance Form</h1>
 <%= form_for( @appearance , remote: true) do |f| %>
