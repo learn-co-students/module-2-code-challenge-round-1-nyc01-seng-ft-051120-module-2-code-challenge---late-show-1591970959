@@ -1,0 +1,23 @@
+<h1> Hey, want to suggest an appearance? </h1>
+
+<% if flash[:errors]%>
+    <% flash[:errors].each do |msg| %>
+        <h4>ERROR: <%= msg %></h4>
+    <% end %>
+<% end %><br>
+
+<%= form_for @appearance do |f| %>
+
+    <%= f.label :guest_id, "Which celeb would you like to see?" %>
+    <%= f.collection_select :guest_id, @guests, :id, :name %><br>
+
+    <%= f.label :episode_id, "Which episode would you like to see them on?" %>
+    <%= f.collection_select :episode_id, @episodes, :id, :date %><br>
+
+    <%= f.label :rating, "How would you rate this appearance?" %>
+    <%= f.number_field :rating%><br>
+    
+
+    <%= f.submit%>
+
+<% end %>
