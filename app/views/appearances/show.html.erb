@@ -1,0 +1,10 @@
+<h1> Appearance <h1>
+
+<p><%= @appearance.episode.date %><p>
+
+
+<p><% @appearance.episode.guests.each do |g| %><p>
+  <p><%= link_to g.name, guest_path(@appearance.guest_id) %><p>
+  <%end%>
+
+#This was supposed to be the EPISODE SHOW.  I read it wrong and made it the Appearance show page. 
