@@ -3,4 +3,7 @@ class Appearance < ApplicationRecord
     belongs_to :episode
 
     validates :rating, inclusion: { in: 1..5 }
+    validates :guest, uniqueness: :true
+
+    
 end
