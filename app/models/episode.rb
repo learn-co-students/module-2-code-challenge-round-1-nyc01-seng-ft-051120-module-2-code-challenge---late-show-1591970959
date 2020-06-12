@@ -6,4 +6,11 @@ class Episode < ApplicationRecord
         "Episode Number #{self.number} on #{self.date}"
     end
 
+    def average_rating
+        total_rating = self.appearances.reduce(0) do |sum, appearance|
+            sum + appearance.numeric_rating
+        end
+        total_rating.to_f / self.appearances.count.to_f
+    end
+
 end

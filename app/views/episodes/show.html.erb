@@ -8,6 +8,7 @@
     <% @episode.appearances.each do |appearance| %>
     <h4>Guest Name: <%= link_to appearance.guest.name, guest_path(appearance.guest) %> - Guest Occupation <%= appearance.guest.occupation %></h4>
     <% end %>
+    <h4> Average Rating of Guest Appearances: <%= @episode.average_rating %></h3>
 <% else %>
     <h3> This Episode has not booked any guests.</h3>
 <% end %>
