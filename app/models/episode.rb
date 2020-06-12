@@ -7,7 +7,7 @@ class Episode < ApplicationRecord
       return 0
     end 
     sum = self.appearances.reduce(0){|sum, appearance| sum + appearance.rating}
-    average = sum / self.appearances.count
+    sum.to_f / self.appearances.count
   end
 end
 
