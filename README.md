@@ -15,15 +15,15 @@ In this repo, there is a Rails application with some features built out. Your jo
 
 ## Setup
 
-Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
+[x] Before you begin coding your solution, clone this repo and then `cd` into it. Then run `bundle install`, `rails db:migrate`, and `rails db:seed` to install dependencies and set up the database, and run `rails s` to start the server.
 
 ## The Domain
 
-The application keeps track of the guests that have appeared on the show.
+[x] The application keeps track of the guests that have     appeared on the show.
 
-There are three models in the domain: Guest, Episode, and Appearance.
+[x] There are three models in the domain: Guest, Episode, and Appearance.
 
-Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
+[x] Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
 
 ## What You Already Have
 
@@ -53,16 +53,16 @@ Guests
 
 ### Model Methods and Validations
 
-- None
+[x] - None
 
 ### Routes, Controllers and Views
 
-- Episodes index
+[x]- Episodes index
 - Guests index
 
 ## Instructions
 
-Update the code of the application to meet the following deliverables. Follow RESTful naming conventions and the MVC pattern to divide responsibility.
+[x] Update the code of the application to meet the following deliverables. Follow RESTful naming conventions and the MVC pattern to divide responsibility.
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
@@ -72,18 +72,18 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
-- Guest can appear on many episodes
-- Episode can have multiple guests
-- Appearance stores a numeric rating
+[x]- Guest can appear on many episodes
+[x]- Episode can have multiple guests
+[x]- Appearance stores a numeric rating
 
 ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
 
-- Choose an existing guest from a select dropdown
-- Choose an existing episode from a select dropdown
-- Enter a numeric rating
-- Submit the form
+[x]- Choose an existing guest from a select dropdown
+[x]- Choose an existing episode from a select dropdown
+[x]- Enter a numeric rating
+[x]- Submit the form
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
@@ -91,9 +91,9 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
-- A list of the guests who were on that episode
-- Each guest's name should link to the Guest Show page
+[x]- Episode date
+[x]- A list of the guests who were on that episode
+[x]- Each guest's name should link to the Guest Show page
 
 ### 4. Guest Show Page Episode links
 
@@ -101,18 +101,18 @@ On the Guest show page, add a list of the Episodes the Guest has appeared on.
 
 For each Episode, show the:
 
-- date of the Episode
-- rating for the Appearance
+[x]- date of the Episode
+[x]- rating for the Appearance
 
-Each Episode date should link to the show page for that Episode.
+[x] Each Episode date should link to the show page for that Episode.
 
 ### 5. Appearance Rating Validation
 
 The rating on an Appearance should be between 1 and 5 (inclusive - `1` and `5` are okay).
 
-- Add a validation to ensure that the rating is between 1 and 5.
-- Add handling for this error to the Appearance create action.
-- The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
+[x] - Add a validation to ensure that the rating is between 1 and 5.
+[x] - Add handling for this error to the Appearance create action.
+[x] - The validation error should be shown on the Appearance creation form when a user attempts to save an appearance with an invalid rating.
 
 ### 6. Advanced: Additional Appearance Validation
 

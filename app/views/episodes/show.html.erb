@@ -3,6 +3,10 @@
 <h1>Date: &nbsp; <%=@episode.date%></h1><br>
 <h1>Episode Number: &nbsp; <%=@episode.number%></h1>
 
+
+<h4>This Episodes's Guests:</h4>
 <ul>
-<%=@episode.guests%>
+    <%@episode.appearances.each do |appearance|%>
+        <li>Guest name: &nbsp;<%= link_to appearance.guest.name, guest_path(appearance.guest)%></li>
+    <%end%>
 </ul>

@@ -1,0 +1,15 @@
+<h1>Guest page</h1>
+
+
+<h1>Name: &nbsp; <%=@guest.name%></h1><br>
+<h1>Occupation: &nbsp; <%=@guest.occupation%></h1>
+
+<h4>This Guest's Episodes:</h4>
+<ul>
+    <%@guest.appearances.each do |appearance|%>
+        <li>Episode date: &nbsp;<%= link_to appearance.episode.date, episode_path(appearance.episode)%>
+        Episode ranking &nbsp;<%=appearance.rating%></li>
+    <%end%>
+</ul>
+
+<%=button_to "delete guest", guest_path(@guest), method: :delete%>
